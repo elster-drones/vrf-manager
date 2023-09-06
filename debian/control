@@ -7,7 +7,7 @@ Build-Depends:
  bvnos-linux-libc-dev,
  dh-python,
  python3-all,
- python-setuptools | python3-setuptools,
+ python3-setuptools | python-setuptools,
 Standards-Version: 3.9.6
 X-Python3-Version: >= 3.2
 

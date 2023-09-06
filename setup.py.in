@@ -13,7 +13,7 @@ from setuptools import setup
 
 setup(
     name='vrfmanager',
-    version='__CHANGELOG_VERSION__',
+    version='3.1',
     description='Python 3 API for vrf manager library',
     author='Vyatta Package Maintainers',
     author_email='DL-vyatta-help@att.com',
