@@ -16,9 +16,9 @@ Architecture: all
 Section: contrib/perl
 Depends:
  libreadonly-perl,
+ linux-image-vrf,
  ${perl:Depends},
  ${misc:Depends}
-Recommends: linux-image-vrf
 Breaks: libvyatta-vrfmanager-perl-upstream (<< 3.0)
 Replaces: libvyatta-vrfmanager-perl-upstream (<< 3.0)
 Description: vyatta-vrfmanager-perl module
@@ -61,10 +61,10 @@ Section: contrib/perl
 Depends:
  libvyatta-vrfmanager-perl,
  libvyatta-config-perl,
+ linux-image-vrf,
  iproute2 (>= 4.10.0-1),
  ${perl:Depends},
  ${misc:Depends}
-Recommends:  linux-image-vrf
 Breaks: vrf-manager-upstream (<< 3.0)
 Replaces: vrf-manager-upstream (<< 3.0)
 Description: VRF Manager core and utilities
@@ -78,9 +78,9 @@ Depends:
  libvyatta-vrfmanager-perl,
  iproute2 (>= 4.14.1-0vyatta3),
  iproute2 (<< 4.15) | iproute2 (>= 4.15.0-0vyatta2),
+ linux-image-vrf,
  ${perl:Depends},
  ${misc:Depends}
-Recommends:  linux-image-vrf
 Breaks: chvrf-upstream (<< 3.0)
 Replaces: chvrf-upstream (<< 3.0)
 Description: Utility to run a process in a VRF context
