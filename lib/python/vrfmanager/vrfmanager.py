@@ -19,7 +19,7 @@ vrfname_none = ""
 vrfname_default = "default"
 vrf_master_prefix = "vrf"
 
-class VrfManagerException(BaseException):
+class VrfManagerException(Exception):
     pass
 
 class Vrf(object):

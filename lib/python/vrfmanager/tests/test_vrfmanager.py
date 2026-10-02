@@ -84,6 +84,15 @@ EEN 1000
                 mock_subprocess.assert_called_with(
                     ["/usr/sbin/getvrflist"], universal_newlines=True)
 
+        def test_failures_use_standard_exception_hierarchy(self):
+            with patch('subprocess.check_output',
+                       side_effect=FileNotFoundError('getvrflist')):
+                with self.assertRaises(Exception) as raised:
+                    self.VRF.get_vrf_id("GREEN")
+
+            self.assertIsInstance(raised.exception,
+                                  vrfmanager.VrfManagerException)
+
         def test_valid_name(self):
             with patch('subprocess.check_output') as mock_subprocess:
                 mock_subprocess.return_value = self.mapping
