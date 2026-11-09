@@ -2,7 +2,7 @@ Source: vrf-manager
 Section: contrib/net
 Priority: extra
 Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
-Build-Depends:
+Build-Depends: libpython3-dev,
  debhelper (>= 9),
  bvnos-linux-libc-dev,
  dh-python,
