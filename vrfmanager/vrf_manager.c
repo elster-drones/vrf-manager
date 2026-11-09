@@ -54,7 +54,7 @@ static int getwords(char *line, char *words[], int maxwords)
 static int getlinecount(FILE *fp)
 {
 	int count = 0;
-	char c;
+	int c;
 
 	for (c = getc(fp); c != EOF; c = getc(fp))
 		if (c == '\n')
