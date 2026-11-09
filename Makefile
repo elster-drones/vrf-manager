@@ -1,5 +1,5 @@
-CC = gcc
-AR = ar rsc
+CC ?= gcc
+AR ?= ar
 RM = rm -f
 
 libdir = /usr/lib/$(DEB_HOST_MULTIARCH)
@@ -20,7 +20,7 @@ all: library libvrfmanager-vyatta.pc
 library:
 	mkdir -p $(LIBPATH)
 	$(CC) -c -fPIC $(SRC) -o $(OBJ)
-	$(AR) $(LIBPATH)/$(LIB) -o $(OBJ)
+	$(AR) rsc $(LIBPATH)/$(LIB) $(OBJ)
 
 libvrfmanager-vyatta.pc: libvrfmanager-vyatta.pc.in
 	sed -e 's,@libdir@,$(libdir),g' -e 's,@incdir@,$(incdir),g' -e 's,@version@,$(pkgversion),g' $< > $@
